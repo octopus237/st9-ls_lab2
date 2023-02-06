@@ -3,6 +3,8 @@ from flask import Flask,render_template,request,redirect,url_for,flash, session
 from flask_session import Session
 import sqlite3 as sql
 app=Flask(__name__)
+
+#Session needed to maintain the data in browser
 app.config["SESSION_TYPE"] = "filesystem"
 app.secret_key=os.environ.get("SECRET_KEY", "secret-key-here")
 Session(app)
